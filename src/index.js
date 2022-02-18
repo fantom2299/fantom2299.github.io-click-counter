@@ -1,17 +1,56 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './style.css';
+
+
+function Click() {
+
+    let [ number, setNumber ] = useState (0)
+    function Press() {
+        setNumber( number + 1 );
+    }
+
+    return (
+        <div id="click-container">
+            <div id="container">{ number }</div>
+            <div id="button-container">
+                <Button className="button-like" text={'Like'} bgColor={'green'} onClick={ Press } />
+            </div>
+        </div>
+    );
+
+}
+
+
+
+
+function Button(props) {
+    let { text, bgColor, onClick } = props;
+
+    return (
+        <button
+            className="button"
+            style={{ backgroundColor: bgColor }}
+            onClick={ onClick }
+        >
+            { text }
+        </button>
+    )
+}
+
+
+
+
+
+
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Click />
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+

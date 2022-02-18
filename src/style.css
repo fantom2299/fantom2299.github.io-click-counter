@@ -1,0 +1,42 @@
+
+
+.button {
+  padding: 4px 20px;
+  background-color: lightseagreen;
+  border: 1px solid blue;
+  border-radius: 6px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#click-container {
+  width: 400px;
+  margin: 60px auto;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: lightseagreen;
+}
+
+
+h4 {
+  text-align: center;
+}
+
+.button {
+  margin-right: 0;
+}
+
+
+#container {
+  padding: 20px;
+  text-align: center;
+  margin: 20px
+}
+
+#button-container {
+  display: flex;
+  justify-content: center;
+  margin-left: 12px;
+}
+
+
